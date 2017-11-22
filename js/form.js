@@ -22,7 +22,6 @@ botaoAdicionar.addEventListener("click", function(event) {
     form.reset();
 });
 
-
 function obtemPacienteDoFormulario(form) {
     var paciente = {
         nome: form.nome.value,
