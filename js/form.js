@@ -8,12 +8,13 @@ botaoAdicionar.addEventListener("click", function(event) {
     var form = document.querySelector("#form-adiciona");
     var paciente = obtemPacienteDoFormulario(form);
     var pacienteTr = montaTr(paciente);
-
+    var msgErro = document.querySelector("#mensagem-erro");
     // valindando formulario 
     var erro = validaPaciente(paciente);
-    console.log(erro);
+    msgErro.textContent = " ";
+    console.log(paciente.peso.length);
     if(erro.length > 0){
-        var msgErro = document.querySelector("#mensagem-erro");
+        
         form.peso.classList.add("campo-invalido");
         msgErro.textContent = erro;
         return;
@@ -22,7 +23,7 @@ botaoAdicionar.addEventListener("click", function(event) {
     var tabela = document.querySelector("#tabela-pacientes");
 
     tabela.appendChild(pacienteTr);
-
+    
     form.reset();
 });
 
@@ -57,7 +58,7 @@ function montaTd(dado, classe) {
 
 function validaPaciente(paciente){
 
-    if(validaPeso(paciente.peso)){
+    if(validaPeso(paciente.peso)  ){
         return "";
     }else{
         return "O peso e invalido";
