@@ -43,13 +43,14 @@ for (var i = 0; i < pacientes.length; i++) {
     }
 }
 
-
+// funçao para calcular o imc
 function calculaImc(peso, altura){
     var imc = 0;
     imc = peso / (altura * altura);
     return imc.toFixed(2);
 }
 
+// função para validar o peso
 function validaPeso(peso){
     
     if (peso >= 0 && peso <= 1000){
@@ -59,6 +60,7 @@ function validaPeso(peso){
     }
 }
 
+// função para validar a altura 
 function validaAltura(altura) {
     if (altura >= 0 && altura <= 3.0){
         return true;
