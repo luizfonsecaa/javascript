@@ -130,16 +130,28 @@ button[disabled=disabled], button:disabled {
 }
 
 .campo-invalido{
-	border: 1px solid lightcoral;
+	border: 1px solid red;
 }
-#mensagem-erro{
-	color:lightcoral;
-}
+
 .paciente-invalido {
 	background-color: lightcoral;
 }
 
-.fadeOut{
+#mensagens-erro {
+	color: red;
+}
+
+.fadeOut {
 	opacity: 0;
 	transition: 0.5s;
+}
+
+#filtrar-tabela {
+	width: 200px;
+	height: 35px;
+	margin-bottom: 10px;
+}
+
+.invisivel {
+	display: none;
 }
